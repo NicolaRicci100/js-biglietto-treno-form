@@ -2,28 +2,23 @@ console.log('JS OK');
 
 const userName = document.getElementById('name');
 const finalName = document.querySelector('.displayed-name');
-const button = document.getElementById('submit-button');
 const userDistance = document.getElementById('distance');
 const userAge = document.getElementById('age');
-
+const button = document.getElementById('submit-button');
 
 button.addEventListener('click', function(){
 
-    //chiedi il nome e il cognome
     finalName.innerText = userName.value;
-    console.log(userName.value);
+    console.log('il nome e il cognome sono ' + userName.value);
 
     //chiedi numero di km da percorrere
-    
     console.log('distanza dichiarata ' + userDistance.value + 'km');
 
     //chiedi età
-    
     console.log('età dichiarata ' + userAge.value);
 
     //validazione (controllo che i valori inseriti siano solo numeri maggiori di 0)
     if(isNaN(userDistance) || isNaN(userAge) || userDistance < 1 || userAge < 1){
-        alert ('i valori devono essere numeri maggiori di 0')
         console.log('valori non validi')
         document.getElementById('tiket-price').innerText = ('ERRORE! ricaricare la pagina e inserire numeri maggiori di 0')
     } else{
