@@ -11,11 +11,54 @@
     </head>
     <body>
         <div class="container">
-            <h1>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-            <div class="card">
-                <div id="tiket-price" class="card-body">
-                    
-                </div>
+            <h1 class="text-light text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <div class="card bg-light p-3">
+                <div class="row">
+                    <div class="col-4">
+                        <label class="form-label">Scrivi il tuo nome e cognome</label>
+                        <input type="text" class="form-control" placeholder="Nome Cognome">
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label">Scrivi la distanza che vuoi percorrere</label>
+                        <input type="number" class="form-control" placeholder="Inserire valore in km">
+                    </div>
+                    <div class="col-4">
+                        <label class="form-label">Seleziona un range di età</label>
+                        <select class="form-select">
+                            <option selected disabled value="">Scegli un'opzione</option>
+                            <option value="1">Minore di 18</option>
+                            <option value="2">Dai 18 ai 65</option>
+                            <option value="3">Maggiore di 65</option>
+                        </select>
+                    </div>
+                    <div class="col mt-3">
+                        <button class="btn btn-primary" type="submit">Conferma</button>
+                        <button class="btn btn-secondary" type="submit">Annulla</button>
+                    </div>
+                </div>  
+            </div>
+            <h1 class="text-light text-center">Il TUO BIGLIETTO</h1>
+            <div class="card bg-light p-3">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th scope="col">NOME PASEGGERO</th>
+                        <th scope="col">OFFERTA</th>
+                        <th scope="col">CARROZZA</th>
+                        <th scope="col">CODICE CP</th>
+                        <th scope="col">COSTO BIGLIETTO</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jonny</td>
+                            <td>biglietto standard</td>
+                            <td>4</td>
+                            <td>12345</td>
+                            <td id="tiket-price"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </body>
