@@ -33,14 +33,22 @@ button.addEventListener('click', function(){
         if ((userAge.value) < 18) {
             reducedPrice = (basePrice * 20) / 100;
             console.log('costo biglietto applicando sconto del 20% ' + (basePrice - reducedPrice) + '€');
+            document.querySelector('.ticket-type').innerText = 'Biglietto ridotto per under 18';
         } else if ((userAge.value) > 65) {
             reducedPrice = (basePrice * 40) / 100;
             console.log('costo biglietto applicando sconto del 40% ' + (basePrice - reducedPrice) + '€');
+            document.querySelector('.ticket-type').innerText = 'Biglietto ridotto per over 65';
         } else {
             reducedPrice = 0;
             console.log('costo biglietto senza sconto ' + (basePrice - reducedPrice) + '€');
+            document.querySelector('.ticket-type').innerText = 'Biglietto standard';
         }
         //prezzo finale del biglietto
         document.getElementById('tiket-price').innerText = (basePrice - reducedPrice).toFixed(2) + '€';
+
+        //carrozza scelta casualmente tra 1 e 10
+        document.querySelector('.wagon').innerText = Math.floor(Math.random() * 10) + 1;
+        //codice CP scelto casualmente tra 99999 e 10000
+        document.querySelector('.cp-code').innerText = Math.floor(Math.random() * 100000 - 10000) + 10000;
     }
 })
