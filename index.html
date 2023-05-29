@@ -16,18 +16,23 @@
                 <div class="row">
                     <div class="col-4">
                         <label class="form-label">Scrivi il tuo nome e cognome</label>
-                        <input id="name" type="text" class="form-control" placeholder="Nome Cognome">
+                        <input type="text" class="form-control" placeholder="Nome Cognome">
                     </div>
                     <div class="col-4">
                         <label class="form-label">Scrivi la distanza che vuoi percorrere</label>
-                        <input id="distance" type="number" class="form-control" placeholder="Inserire valore in km">
+                        <input type="number" class="form-control" placeholder="Inserire valore in km">
                     </div>
                     <div class="col-4">
                         <label class="form-label">Seleziona un range di età</label>
-                        <input id="age" type="number" class="form-control" placeholder="Inserire età anagrafica">
+                        <select class="form-select">
+                            <option selected disabled value="">Scegli un'opzione</option>
+                            <option value="1">Minore di 18</option>
+                            <option value="2">Dai 18 ai 65</option>
+                            <option value="3">Maggiore di 65</option>
+                        </select>
                     </div>
                     <div class="col mt-3">
-                        <button id="submit-button" class="btn btn-primary" type="submit">Conferma</button>
+                        <button class="btn btn-primary" type="submit">Conferma</button>
                         <button class="btn btn-secondary" type="submit">Annulla</button>
                     </div>
                 </div>  
@@ -36,6 +41,13 @@
             <div class="card bg-light p-3">
                 <table class="table">
                     <thead>
+                    <tr>
+                        <th scope="col">NOME PASEGGERO</th>
+                        <th scope="col">OFFERTA</th>
+                        <th scope="col">CARROZZA</th>
+                        <th scope="col">CODICE CP</th>
+                        <th scope="col">COSTO BIGLIETTO</th>
+                    </tr>
                         <tr>
                             <th scope="col">NOME PASEGGERO</th>
                             <th scope="col">OFFERTA</th>
@@ -46,8 +58,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td class="ticket-name"></td>
-                            <td class="ticket-type"></td>
+                            <td>Jonny</td>
+                            <td>biglietto standard</td>
                             <td>4</td>
                             <td>12345</td>
                             <td id="tiket-price"></td>
