@@ -6,6 +6,7 @@ va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori con massimo due decimali, per indicare centesimi sul prezzo. Questo richiederà un minimo di ricerca.
 
 # Steps
+- chiedi nome e cognome
 - chiedi numero chilometri da percorrere
 - chiedi età
 - controlla SE i valori NON sono validi

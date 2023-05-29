@@ -16,23 +16,18 @@
                 <div class="row">
                     <div class="col-4">
                         <label class="form-label">Scrivi il tuo nome e cognome</label>
-                        <input type="text" class="form-control" placeholder="Nome Cognome">
+                        <input id="name" type="text" class="form-control" placeholder="Nome Cognome">
                     </div>
                     <div class="col-4">
                         <label class="form-label">Scrivi la distanza che vuoi percorrere</label>
-                        <input type="number" class="form-control" placeholder="Inserire valore in km">
+                        <input id="distance" type="number" class="form-control" placeholder="Inserire valore in km">
                     </div>
                     <div class="col-4">
                         <label class="form-label">Seleziona un range di età</label>
-                        <select class="form-select">
-                            <option selected disabled value="">Scegli un'opzione</option>
-                            <option value="1">Minore di 18</option>
-                            <option value="2">Dai 18 ai 65</option>
-                            <option value="3">Maggiore di 65</option>
-                        </select>
+                        <input id="age" type="number" class="form-control" placeholder="Inserire età anagrafica">
                     </div>
                     <div class="col mt-3">
-                        <button class="btn btn-primary" type="submit">Conferma</button>
+                        <button id="submit-button" class="btn btn-primary" type="submit">Conferma</button>
                         <button class="btn btn-secondary" type="submit">Annulla</button>
                     </div>
                 </div>  
@@ -51,8 +46,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>Jonny</td>
-                            <td>biglietto standard</td>
+                            <td class="ticket-name"></td>
+                            <td class="ticket-type"></td>
                             <td>4</td>
                             <td>12345</td>
                             <td id="tiket-price"></td>
